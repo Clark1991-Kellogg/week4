@@ -5,6 +5,9 @@
 // Don't change the following code, which represents a series of transactions, each
 // of which represents a transfer of KelloggCoin from one user to another – the first 
 // transaction is the "ICO" (Initial Coin Offering)
+
+// this is an array of objects
+
 let blockchain = [
   { fromUser: null, toUser: 'brian', amount: 20000 },
   { fromUser: 'brian', toUser: 'ben', amount: 9000 },
@@ -15,6 +18,28 @@ let blockchain = [
   { fromUser: 'anthony', toUser: 'nate', amount: 150 },
   { fromUser: 'ben', toUser: 'nate', amount: 2000 }
 ]
+
+// loop here
+
+for(let i=0; i<blockchain.length; i++) {
+  let transaction = blockchain[i]
+  console.log(`${transaction.fromUser} transferred ${transaction.amount} KelloggCoin to ${transaction.toUser}`)
+  }
+
+
+  // function yell(words) {
+  //   return `${words.toUpperCase()}!!!!!`
+  // } 
+   
+  // function makeFullName(firstName, lastName) {
+  //   return `${firstName} ${lastName}`
+  // }
+   
+  // function yellPlayerName(firstName, lastName) {
+  //   let fullName = makeFullName(firstName, lastName)
+  //   let yelled = yell(fullName)
+  //   return yelled
+  // }
 
 // Loop through the blockchain, printing the details of each 
 // transaction with each iteration of the loop, e.g. 

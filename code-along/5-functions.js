@@ -22,5 +22,16 @@ let quotes = [
 
 window.addEventListener('DOMContentLoaded', function() {
   let outputElement = document.querySelector('.output')
-  outputElement.insertAdjacentHTML('beforeend', 'Hello!')
+  // outputElement.insertAdjacentHTML('beforeend', 'Hello!')
+
+for (let i=0; i<quotes.length; i++) {
+  let quote = quotes[i]
+  outputElement.insertAdjacentHTML(`beforeend`, `
+    <div class="font-bold my-8 text-xl text-blue-300">
+      ${quote}
+    </div>
+`)
+}
+
+
 })
